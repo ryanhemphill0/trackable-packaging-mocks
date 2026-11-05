@@ -1,0 +1,56 @@
+name: Enable GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  enable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable Pages from main /
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          repo="${{ github.repository }}"
+          echo "POST create pages site"
+          gh api -X POST "/repos/${repo}/pages" \
+            -f build_type=legacy \
+            -F source[branch]=main \
+            -F source[path]=/
+          post_code=$?
+          echo "POST exit: ${post_code}"
+          if [ "${post_code}" -ne 0 ]; then
+            echo "PUT update pages source"
+            gh api -X PUT "/repos/${repo}/pages" \
+              -f build_type=legacy \
+              -F source[branch]=main \
+              -F source[path]=/
+            echo "PUT exit: $?"
+          fi
+          echo "GET pages site"
+          gh api "/repos/${repo}/pages"
+          exit $?
+
+  deploy:
+    needs: enable
+    if: failure()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
