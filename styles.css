@@ -176,9 +176,10 @@ section{position:relative}
 
 /* ---------- Plan cards ---------- */
 .plans{padding:24px 0 96px}
-.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1120px;margin:0 auto;align-items:stretch}
-.plan-grid.two{grid-template-columns:repeat(2,1fr);max-width:860px}
-@media (max-width:960px){.plan-grid,.plan-grid.two{grid-template-columns:1fr;max-width:520px}}
+.plan-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;width:100%;max-width:1120px;margin:0 auto;align-items:stretch;justify-content:center;justify-items:stretch}
+/* Two-plan layout: same 1120px content width as the 3-up grid, two equal columns, centered as a pair. */
+.plans .plan-grid.two,.plan-grid.two{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:1120px;margin-left:auto;margin-right:auto;justify-content:center;justify-items:stretch}
+@media (max-width:960px){.plans .plan-grid,.plans .plan-grid.two,.plan-grid,.plan-grid.two{grid-template-columns:minmax(0,1fr);max-width:520px}}
 .plan{position:relative;background:#fff;border:1px solid #e5e5e5;border-radius:16px;padding:32px;display:flex;flex-direction:column;box-shadow:0 1px 2px #0000000d;transition:box-shadow .2s}
 .plan:hover{box-shadow:0 10px 30px -10px #0000001f}
 .plan.featured{border:2px solid var(--brand-primary-default);box-shadow:0 20px 40px -16px #2563eb40}
