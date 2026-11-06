@@ -214,6 +214,8 @@ section{position:relative}
     grid-template-rows:subgrid;
     grid-row:span 9;
   }
+  .plan-grid.align-rows .plan .pitch{align-self:end;min-height:0}
+  .plan-grid.align-rows .plan .price{margin-top:12px}
   .plan-grid.align-rows .plan .btn{align-self:stretch}
   .plan-grid.align-rows .plan .divider-label{margin-top:20px}
 }
