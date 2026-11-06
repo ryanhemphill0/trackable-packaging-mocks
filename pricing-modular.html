@@ -32,8 +32,8 @@
 
 <section class="agent-pricing"><div class="wrap"><div class="agent-ladder" aria-label="Draft bundle pricing">
 <div><b>1 agent</b><strong>$<span data-m="299">299</span> <small>/ agent</small></strong><p>CRM +$<span data-m="199">199</span> if the agent needs it</p></div>
-<div><b>2 agents</b><strong>$X <small>/ agent</small></strong><p>CRM included · draft price to be set</p></div>
-<div><b>3+ agents</b><strong>$Y <small>/ agent</small></strong><p>CRM included · draft price to be set</p></div>
+<div><b>2 agents</b><strong>$<span data-m="299">299</span> <small>/ agent</small></strong><p>CRM included · $598 / mo · draft</p></div>
+<div><b>3+ agents</b><strong>$<span data-m="249">249</span> <small>/ agent</small></strong><p>CRM included · 3 agents $747 / mo · draft</p></div>
 </div><p class="popular-pair"><span class="chip blue">Most popular: Call + Recall</span></p></div></section>
 <section class="plans" id="outcomes"><div class="wrap"><div class="oc-grid">
   <div class="plan oc-card">
@@ -123,7 +123,7 @@
 
 <section class="block" id="faq"><div class="wrap">
   <div class="section-head"><span class="label">FAQ</span><h2>Straight answers.</h2></div>
-  <div class="faq"><details><summary>How does bundle pricing work?</summary><p>One agent is $299 per month. Two agents use a draft $X per-agent price; three or more use $Y. Bundle prices are still to be set, so no discount or bundle total is final. CRM is included with any two or more agents.</p></details><details><summary>What is the texting allowance?</summary><p>Plans with texting include a monthly text allowance. Texts beyond that allowance are billed per message. Allowance and overage amounts will be confirmed in your proposal.</p></details><details><summary>Do I need the CRM?</summary><p>Recall, Treatment, Waitlist, and Review require CRM; Call Agent does not. CRM is included free with 2+ agents. With a single agent it is +$199, required for those four CRM-dependent agents and optional with Call Agent.</p></details><details><summary>Will the agent actually book appointments?</summary><p>Yes, on Dentrix, Eaglesoft, Open Dental, CareStack, and Dentrix Ascend. On other systems it captures the patient and hands your team a ready-to-book lead.</p></details><details><summary>Is there a setup fee?</summary><p>Yes, a one-time Trackable setup fee, separate from LaunchPad.</p></details></div>
+  <div class="faq"><details><summary>How does bundle pricing work?</summary><p>One agent is $299 per month. Two agents are $299 each ($598) and three or more are $249 each, with the CRM included. These are draft prices. CRM is included with any two or more agents.</p></details><details><summary>What is the texting allowance?</summary><p>Plans with texting include a monthly text allowance. Texts beyond that allowance are billed per message. Allowance and overage amounts will be confirmed in your proposal.</p></details><details><summary>Do I need the CRM?</summary><p>Recall, Treatment, Waitlist, and Review require CRM; Call Agent does not. CRM is included free with 2+ agents. With a single agent it is +$199, required for those four CRM-dependent agents and optional with Call Agent.</p></details><details><summary>Will the agent actually book appointments?</summary><p>Yes, on Dentrix, Eaglesoft, Open Dental, CareStack, and Dentrix Ascend. On other systems it captures the patient and hands your team a ready-to-book lead.</p></details><details><summary>Is there a setup fee?</summary><p>Yes, a one-time Trackable setup fee, separate from LaunchPad.</p></details></div>
 </div></section>
 
 <section class="block tight" id="fine-print"><div class="wrap">
@@ -151,9 +151,9 @@
 </section>
 <div class="draft-badge" role="note"><span class="dot"></span>Internal draft · Agent lineup · prices not final<a href="index.html">All mocks</a></div>
 <aside class="agent-summary" aria-label="Your agent bundle"><div class="wrap summary-layout">
-<div class="summary-selection" aria-live="polite"><b id="summary-count">2 agents selected</b><span id="summary-rate">$X / agent / mo</span><span id="summary-crm">CRM included</span></div>
+<div class="summary-selection" aria-live="polite"><b id="summary-count">2 agents selected</b><span id="summary-rate">$299 / agent / mo</span><span id="summary-crm">CRM included</span></div>
 <div class="summary-options"><label><input id="crm-option" type="checkbox"> Optional CRM +$<span data-m="199">199</span></label><label><input id="scheduler-option" type="checkbox"> Online Scheduler +$<span data-m="199">199</span></label></div>
-<div class="summary-total" aria-live="polite"><strong id="summary-total">Bundle price to be set</strong><small id="summary-list">List price: $797 / mo</small><small id="summary-billing">Per location · billed monthly</small></div>
+<div class="summary-total" aria-live="polite"><strong id="summary-total">$598 / mo</strong><small id="summary-list">List price: $797 / mo</small><small id="summary-billing">Per location · billed monthly</small></div>
 <a class="btn btn-primary" href="https://calendly.com/trackable/demo" target="_blank" rel="noopener">Talk to sales</a></div></aside>
 <script>
 let annual = false;
@@ -175,9 +175,9 @@ function updateSummary(){
  const crmCharge=count===1&&(requiresCRM||(optional&&crmOption.checked));
  const scheduler=schedulerOption.checked;
  document.getElementById('summary-count').textContent=count+' agent'+(count===1?'':'s')+' selected';
- document.getElementById('summary-rate').textContent=count===0?'Choose your agents':(count===1?money(299):count===2?'$X':'$Y')+' / agent / mo';
+ document.getElementById('summary-rate').textContent=count===0?'Choose your agents':(count<=2?money(299):money(249))+' / agent / mo';
  document.getElementById('summary-crm').textContent=count>=2?'CRM included':count===0?'CRM added with your lineup':requiresCRM?'+'+money(199)+' CRM required':crmOption.checked?'CRM added +'+money(199):'CRM optional +'+money(199);
- document.getElementById('summary-total').textContent=count>=2?'Bundle price to be set':count===0?'Choose at least 1 agent':money(299+199*Number(crmCharge)+199*Number(scheduler))+' / mo';
+ document.getElementById('summary-total').textContent=count===0?'Choose at least 1 agent':money((count<=2?299:249)*count+199*Number(crmCharge)+199*Number(scheduler))+' / mo';
  // Undiscounted monthly reference includes CRM at list price, even when bundled free.
  document.getElementById('summary-list').textContent='List price: $'+(count*299+(count?199:0)+(scheduler?199:0)).toLocaleString('en-US')+' / mo';
  document.getElementById('summary-billing').textContent='Per location · '+(annual?'billed annually · 15% off set prices':'billed monthly');
