@@ -678,3 +678,25 @@ section{position:relative}
  .sku-price{font-size:22px}
  .sku-group-heading{margin-bottom:8px}
 }
+
+/* Modular v2: one Platform SKU and level agent cards · 20261106n */
+.agent-lineup .agents-grid{align-items:stretch}
+.agent-lineup .agents-grid .sku-card{display:flex;flex-direction:column}
+.agent-lineup .agents-grid .sku-heading{min-height:38px}
+.agent-lineup .agents-grid .sku-outcome{min-height:42px}
+.agent-lineup .agents-grid .sku-price{min-height:28px}
+.agent-lineup .agents-grid .sku-note{min-height:30px}
+.agent-lineup .agents-grid .availability-slot{min-height:20px;display:flex;align-items:center}
+.agent-lineup .agents-grid .availability{margin:0;line-height:16px}
+.agent-lineup .agents-grid details{margin-top:auto}
+.agent-lineup .platform-grid .platform-card{flex:1 1 100%;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;padding:18px 22px}
+.platform-main{flex:1;min-width:0}
+.platform-pricing{flex:0 0 300px}
+.agent-lineup .platform-card .sku-heading{min-height:0;font-size:18px}
+.agent-lineup .platform-card .sku-outcome{min-height:0;margin-top:8px}
+.platform-features{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;list-style:none;font-size:12px;color:#525252}
+.platform-features li::before{content:'✓';color:#2563eb;margin-right:5px}
+.agent-lineup .platform-card .sku-note{min-height:0;margin:6px 0}
+.agent-lineup .addons-grid .sku-card{flex:0 0 calc((100% - 30px)/4)}
+@media(max-width:1000px){.agent-lineup .platform-grid .platform-card{flex-direction:column;align-items:stretch}.platform-pricing{flex:1 1 auto}.agent-lineup .addons-grid .sku-card{flex-basis:calc((100% - 10px)/2)}}
+@media(max-width:360px){.agent-lineup .addons-grid .sku-card{flex-basis:100%}}
