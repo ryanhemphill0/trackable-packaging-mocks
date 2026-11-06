@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>[Draft] Pricing — Inbound &amp; outbound · Trackable</title>
 <link rel="icon" type="image/svg+xml" href="https://trackable.io/favicon.svg">
-<link rel="stylesheet" href="styles.css?v=20261105e">
+<link rel="stylesheet" href="styles.css?v=20261105f">
 </head><body>
 <nav class="header-nav"><div class="wrap"><div class="bar">
   <div class="left">
@@ -28,7 +28,7 @@
   <h1>When they call you, <em>and when you need them back.</em></h1>
   <p class="lead">One easy question: do you want us to cover inbound calls, outbound follow-up, or both?</p>
   <div class="thesis"><span>THE RULE</span>Outbound runs on your contacts, so Outbound and Both include the CRM.</div>
-  <div class="toggle" role="tablist"><button class="on" data-bill="m">Monthly</button><button data-bill="a">Annual <span class="save">~20% off</span></button></div>
+  <div class="toggle" role="tablist"><button class="on" data-bill="m">Monthly</button><button data-bill="a">Annual <span class="save">15% off</span></button></div>
 </div></section>
 
 <section class="plans" id="plans"><div class="wrap"><div class="plan-grid">
@@ -36,7 +36,7 @@
     <div class="tier">When they call you</div><h3>Inbound</h3>
     <p class="pitch">The Voice Agent. Works on its own, no CRM required.</p>
     <div class="price"><span class="amt"><sup>$</sup><span data-m="299">299</span></span><span class="per">/ location / mo</span></div>
-    <div class="price-note" data-note-m="Billed monthly · draft price" data-note-a="Billed annually · ~20% off · draft price">Billed monthly · draft price</div>
+    <div class="price-note" data-note-m="Billed monthly · draft price" data-note-a="Billed annually · 15% off · draft price">Billed monthly · draft price</div>
     <a class="btn btn-dark btn-block" href="https://calendly.com/trackable/demo" target="_blank" rel="noopener">Choose Inbound</a>
     <div class="divider-label">What's included</div>
     <ul class="feat">
@@ -55,7 +55,7 @@
     <div class="tier">Inbound + outbound</div><h3>Both</h3>
     <p class="pitch">Every call answered, every patient brought back. $99 less than buying Inbound and Outbound separately.</p>
     <div class="price"><span class="amt"><sup>$</sup><span data-m="599">599</span></span><span class="per">/ location / mo</span></div>
-    <div class="price-note" data-note-m="Billed monthly · draft price" data-note-a="Billed annually · ~20% off · draft price">Billed monthly · draft price</div>
+    <div class="price-note" data-note-m="Billed monthly · draft price" data-note-a="Billed annually · 15% off · draft price">Billed monthly · draft price</div>
     <a class="btn btn-primary btn-block" href="https://calendly.com/trackable/demo" target="_blank" rel="noopener">Choose Both</a>
     <div class="divider-label">Everything in Inbound and Outbound</div>
     <ul class="feat">
@@ -72,7 +72,7 @@
     <div class="tier">When you need them back</div><h3>Outbound</h3>
     <p class="pitch">Recall, confirmations, reminders, and reviews. Includes the CRM, because outbound needs your contacts.</p>
     <div class="price"><span class="amt"><sup>$</sup><span data-m="399">399</span></span><span class="per">/ location / mo</span></div>
-    <div class="price-note" data-note-m="Billed monthly · draft price" data-note-a="Billed annually · ~20% off · draft price">Billed monthly · draft price</div>
+    <div class="price-note" data-note-m="Billed monthly · draft price" data-note-a="Billed annually · 15% off · draft price">Billed monthly · draft price</div>
     <a class="btn btn-dark btn-block" href="https://calendly.com/trackable/demo" target="_blank" rel="noopener">Choose Outbound</a>
     <div class="divider-label">What's included</div>
     <ul class="feat">
@@ -133,7 +133,7 @@
 <section class="block tight" id="fine-print"><div class="wrap">
 <div class="footnotes">
   <h5>Fine print (applies to every plan on this page)</h5>
-  <div class="fn"><span class="k">1</span><div><b>Per location, per month.</b> All prices are drafts, quoted per practice location per month. Draft amounts: Inbound $299, Outbound $399 (CRM included), and Both $599 (CRM included), which is $99 less than Inbound and Outbound bought separately ($698). Annual billing saves roughly 20%.</div></div>
+  <div class="fn"><span class="k">1</span><div><b>Per location, per month.</b> All prices are drafts, quoted per practice location per month. Draft amounts: Inbound $299, Outbound $399 (CRM included), and Both $599 (CRM included), which is $99 less than Inbound and Outbound bought separately ($698). Annual billing saves 15%.</div></div>
   <div class="fn"><span class="k">2</span><div><b>Texting.</b> Every plan includes a monthly text allowance. Messages beyond it are billed per message, because we pay carriers for every SMS, whether or not an agent sent it.</div></div>
   <div class="fn"><span class="k">3</span><div><b>One-time setup.</b> A one-time Trackable setup fee is billed separately and covers onboarding, call routing, and PMS connection. This is Trackable's own setup, not LaunchPad (LaunchPad is an SMC program).</div></div>
   <div class="fn"><span class="k">4</span><div><b>Booking depends on your PMS.</b> The agent books directly into supported systems. On any other PMS, it captures the patient and hands off to your team to book.
@@ -158,7 +158,7 @@
 document.querySelectorAll('[data-bill]').forEach(b=>b.addEventListener('click',()=>{
   const a=b.dataset.bill==='a';
   document.querySelectorAll('[data-bill]').forEach(x=>x.classList.toggle('on',x===b));
-  document.querySelectorAll('[data-m]').forEach(el=>{const m=+el.dataset.m;el.textContent=a?Math.round(m*0.8):m;});
+  document.querySelectorAll('[data-m]').forEach(el=>{const m=+el.dataset.m;el.textContent=a?Math.round(m*0.85):m;});
   document.querySelectorAll('[data-note-m]').forEach(el=>{el.textContent=a?el.dataset.noteA:el.dataset.noteM;});
 }));
 </script>
