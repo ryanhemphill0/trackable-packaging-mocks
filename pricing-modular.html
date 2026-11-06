@@ -108,7 +108,7 @@ function updateSummary() {
  document.getElementById('platform-price-unit').textContent = count >= 2 ? ' · included' : count === 0 ? ' / mo standalone' : ' / mo with 1 agent';
  document.querySelectorAll('.agent-card-price').forEach(el => { el.dataset.m = count >= 2 ? 199 : 299; });
  renderPrices();
- document.getElementById('summary-count').textContent = count + ' agent' + (count === 1 ? '' : 's') + ' · ' + skuChecks.filter(x => x.checked).length + ' CRM / add-on selections';
+ { const addons = [schedulerOption, workflowOption].filter(x => x.checked).length; const parts = []; if (count) parts.push(count + ' agent' + (count === 1 ? '' : 's')); if (platformOption.checked) parts.push('CRM'); if (addons) parts.push(addons + ' add-on' + (addons === 1 ? '' : 's')); document.getElementById('summary-count').textContent = parts.length ? parts.join(' · ') : 'Nothing selected yet'; }
  document.getElementById('summary-rate').textContent = full ? 'Full Front Desk AI · all 5 + CRM + Scheduler' : count ? money(count === 1 ? 299 : 199) + ' / agent / mo' : 'Build a plan with or without agents';
  document.getElementById('summary-crm').textContent = count >= 2 ? 'CRM included' : platformOption.checked ? 'CRM ' + money(platformPrice) + ' / mo' : 'CRM not selected';
  const total = document.getElementById('summary-total'); total.replaceChildren();
