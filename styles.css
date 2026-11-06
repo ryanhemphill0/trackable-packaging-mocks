@@ -694,9 +694,41 @@ section{position:relative}
 .platform-pricing{flex:0 0 300px}
 .agent-lineup .platform-card .sku-heading{min-height:0;font-size:18px}
 .agent-lineup .platform-card .sku-outcome{min-height:0;margin-top:8px}
-.platform-features{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;list-style:none;font-size:12px;color:#525252}
-.platform-features li::before{content:'✓';color:#2563eb;margin-right:5px}
 .agent-lineup .platform-card .sku-note{min-height:0;margin:6px 0}
 .agent-lineup .addons-grid .sku-card{flex:0 0 calc((100% - 30px)/4)}
 @media(max-width:1000px){.agent-lineup .platform-grid .platform-card{flex-direction:column;align-items:stretch}.platform-pricing{flex:1 1 auto}.agent-lineup .addons-grid .sku-card{flex-basis:calc((100% - 10px)/2)}}
 @media(max-width:360px){.agent-lineup .addons-grid .sku-card{flex-basis:100%}}
+
+/* Modular v3: included Platform features as illustrated mini tiles. */
+.agent-lineup .platform-grid .platform-card{display:flex;flex-direction:column;align-items:stretch;gap:20px;padding:24px;border-color:#dbeafe;background:linear-gradient(180deg,#f8fbff 0%,#fff 45%)}
+.platform-overview{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.agent-lineup .platform-card .sku-heading{font-size:20px;align-items:center}
+.agent-lineup .platform-card .sku-outcome{font-size:13px;line-height:1.5;margin-top:6px}
+.platform-pricing{padding-left:24px;border-left:1px solid #dbeafe}
+.platform-pricing .sku-price{font-size:28px}
+.platform-pricing details{border-top:0;padding-top:3px}
+.platform-features{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.platform-feature{display:flex;align-items:flex-start;gap:10px;padding:15px 12px;background:#fff;border:1px solid #e8edf5;border-radius:12px;min-width:0;box-shadow:0 2px 5px #1e40af03}
+.platform-feature-icon{display:flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;height:34px;border-radius:10px;background:#eff6ff;color:#2563eb}
+.platform-feature-icon svg{display:block;width:20px;height:20px}
+.platform-feature-copy{min-width:0}
+.platform-feature-copy h3{font-family:var(--font-sans);font-size:12px;font-weight:700;line-height:1.4;margin:0 0 4px;color:#171717;letter-spacing:0}
+.platform-feature-copy p{font-size:11px;line-height:1.5;color:#64748b;margin:0}
+@media(min-width:1100px){.platform-feature-copy p{white-space:nowrap}}
+@media(max-width:1099px){.platform-features{grid-template-columns:repeat(2,minmax(0,1fr))}.platform-overview{align-items:flex-start}.platform-pricing{flex:0 0 230px}}
+@media(max-width:649px){.agent-lineup .platform-grid .platform-card{padding:18px;gap:16px}.platform-overview{flex-direction:column;gap:16px}.platform-pricing{flex:1 1 auto;width:100%;padding-left:0;padding-top:14px;border-left:0;border-top:1px solid #dbeafe}.platform-features{grid-template-columns:minmax(0,1fr);gap:8px}.platform-feature{padding:13px}.platform-feature-copy h3{font-size:13px}.platform-feature-copy p{font-size:12px}}
+
+/* Text allowance is included within Platform, not a separate add-on. */
+.platform-feature-texting .platform-feature-copy p{white-space:normal}
+.agent-lineup .addons-grid .sku-card{flex-basis:calc((100% - 20px)/3)}
+@media(max-width:650px){.agent-lineup .addons-grid .sku-card{flex-basis:100%}}
+
+/* Onboarding is a one-time information section, not a selectable add-on. */
+.agent-lineup .addons-grid .sku-card{flex-basis:calc((100% - 10px)/2)}
+.setup-info{display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid #e5e7eb;border-radius:12px;padding:22px 24px;background:#fafbfc;box-shadow:none}
+.setup-info h3{font-size:16px;margin:0 0 5px}
+.setup-info p{font-size:13px;color:#64748b;margin:0}
+.setup-info-price{display:flex;flex-direction:column;gap:4px;flex-shrink:0}
+.setup-info-price strong{font-size:23px;color:#171717}
+.setup-info-price span{font-size:12px;color:#64748b}
+@media(max-width:650px){.agent-lineup .addons-grid .sku-card{flex-basis:100%}.setup-info{flex-direction:column;align-items:flex-start;padding:18px;gap:14px}}
