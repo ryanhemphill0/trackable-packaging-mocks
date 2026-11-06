@@ -205,6 +205,19 @@ section{position:relative}
 .chip.stop{background:#fef2f2;color:var(--danger-strong);border-color:#fecaca}
 .chip.blue{background:#eff6ff;color:var(--brand-primary-default);border-color:#dbeafe}
 
+/* Keep price, CTA, and "what's included" on one horizontal line across 3 cards */
+.plan-grid.align-rows .plan{border-width:2px;border-color:#e5e5e5}
+.plan-grid.align-rows .plan.featured{border-color:var(--brand-primary-default)}
+@media (min-width:961px){
+  .plan-grid.align-rows .plan{
+    display:grid;
+    grid-template-rows:subgrid;
+    grid-row:span 9;
+  }
+  .plan-grid.align-rows .plan .btn{align-self:stretch}
+  .plan-grid.align-rows .plan .divider-label{margin-top:20px}
+}
+
 /* Bundle-led layout */
 .bundle-layout{display:grid;grid-template-columns:1fr 1.55fr 1fr;gap:24px;align-items:center;max-width:1180px;margin:0 auto}
 @media (max-width:1024px){.bundle-layout{grid-template-columns:1fr;max-width:620px}.bundle-layout .hero-bundle{order:-1}}
