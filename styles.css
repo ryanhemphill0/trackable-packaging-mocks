@@ -202,7 +202,6 @@ section{position:relative}
 .outcome-line{margin-top:auto;padding-top:20px;display:flex;gap:6px;flex-wrap:wrap}
 .chip{display:inline-flex;align-items:center;font-size:12px;font-weight:500;padding:3px 10px;border-radius:999px;background:#f5f5f5;color:var(--text-default);border:1px solid #ebebeb}
 .chip.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
-.chip.stop{background:#fef2f2;color:var(--danger-strong);border-color:#fecaca}
 .chip.blue{background:#eff6ff;color:var(--brand-primary-default);border-color:#dbeafe}
 
 /* Keep price, CTA, and "what's included" on one horizontal line across 3 cards */
@@ -408,42 +407,11 @@ section{position:relative}
 .tcard.sm{width:52px;height:90px}
 .tcard.big{width:96px;height:140px}
 .tcard.s{width:40px;height:70px}
-.thumb.bad{gap:6px;align-items:flex-end}
-.thumb.bad .tcard{border-style:dashed;border-color:#fca5a5}
 .choice .body{padding:24px;display:flex;flex-direction:column;gap:10px;flex:1}
 .choice h3{font-size:22px}
 .choice p{font-size:14px;color:#525252;line-height:1.6;flex:1}
 .choice .go{font-size:14px;font-weight:600;color:var(--brand-primary-default);margin-top:6px}
 
-/* ==========================================================================
-   Modular (current-style catalog) — annotated "before" page
-   ========================================================================== */
-.callout-stop{max-width:720px;margin:28px auto 0;text-align:left;display:flex;gap:14px;padding:16px 20px;border-radius:12px;background:#fef2f2;border:1px solid #fecaca;color:#7f1d1d;font-size:14px;line-height:1.6}
-.callout-stop svg{width:20px;height:20px;flex-shrink:0;stroke:var(--danger);margin-top:2px}
-.callout-stop b{color:#7f1d1d}
-.cat-head{max-width:1120px;margin:0 auto 18px}
-.cat-head h2{font-size:28px;margin-bottom:6px}
-.cat-head p{font-size:15px;color:var(--text-subtle)}
-.cat-head + .catalog{margin-bottom:56px}
-.catalog{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1120px;margin:0 auto}
-@media (max-width:1024px){.catalog{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.catalog{grid-template-columns:1fr}}
-.sku{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:20px;display:flex;flex-direction:column;box-shadow:0 1px 2px #0000000d}
-.sku .code{align-self:flex-start;font-family:var(--font-mono);font-size:11px;color:var(--text-subtle);background:#f5f5f5;border-radius:4px;padding:2px 6px;margin-bottom:12px}
-.sku h4{font-size:17px}
-.sku .pp{font-family:var(--font-heading);font-weight:700;font-size:28px;color:var(--text-strong);margin:8px 0 12px}
-.sku .pp small{font-family:var(--font-sans);font-size:13px;font-weight:400;color:var(--text-subtle)}
-.sku ul{flex:1}
-.sku li{font-size:14px;color:#525252;padding-left:14px;position:relative;margin-bottom:4px}
-.sku li::before{content:"";position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:#d4d4d4}
-.sku.combo{background:var(--bg-subtle)}
-.flag{margin-top:16px;font-size:12.5px;line-height:1.5;color:#991b1b;background:#fef2f2;border:1px dashed #fca5a5;border-radius:8px;padding:8px 10px 8px 28px;position:relative}
-.flag::before{content:"!";position:absolute;left:9px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--danger);color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
-.problems{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1120px;margin:0 auto}
-@media (max-width:860px){.problems{grid-template-columns:1fr}}
-.problem{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:24px;border-top:3px solid #fca5a5}
-.problem h4{font-size:17px;margin-bottom:8px}
-.problem p{font-size:14px;color:#525252}
 .calc{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto}
 @media (max-width:860px){.calc{grid-template-columns:1fr}}
 .calc .q{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:24px}
@@ -549,11 +517,6 @@ section{position:relative}
   /* Index chooser */
   .choice .thumb{height:150px}
 
-  /* Modular catalog */
-  .cat-head h2{font-size:24px}
-  .cat-head + .catalog{margin-bottom:40px}
-  .cat-head[style]{margin-top:40px!important}
-  .callout-stop{padding:14px 16px}
   .calc{gap:16px}
   .center-ctas{flex-direction:column;align-items:stretch;margin-top:32px}
 
@@ -584,4 +547,28 @@ section{position:relative}
   .hero h1{font-size:32px}
   .price .amt{font-size:40px}
   .hero-bundle .price .amt{font-size:46px}
+}
+
+/* Modular: "built from" pieces row on plan cards */
+.built{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:16px}
+.built .k{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-subtle);margin-right:2px}
+.built .piece{font-size:12px;font-weight:500;padding:3px 9px;border-radius:999px;background:#f5f5f5;border:1px solid #e5e5e5;color:var(--text-default)}
+.plan.featured .built .piece{background:#eff6ff;border-color:#dbeafe;color:var(--brand-primary-default)}
+.plan-grid.align-rows .plan .built + .divider-label{margin-top:16px}
+/* Modular: the pieces */
+.piece-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;max-width:1120px;margin:0 auto}
+@media (max-width:1100px){.piece-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.piece-grid{grid-template-columns:minmax(0,1fr)}}
+.module{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:20px;display:flex;flex-direction:column;box-shadow:0 1px 2px #0000000d}
+.module .role{align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-primary-default);margin-bottom:8px}
+.module h4{font-size:17px}
+.module p{font-size:14px;color:#525252;margin:6px 0 12px;flex:1}
+.module .dep{font-size:12.5px;line-height:1.45;border-radius:8px;padding:6px 10px;background:#f5f5f5;color:var(--text-default)}
+.module .dep.ok{background:#f0fdf4;color:#166534}
+.module .dep.req{background:#eff6ff;color:var(--brand-primary-default)}
+.module .in{font-size:12px;color:var(--text-subtle);margin-top:8px}
+/* Usage / price-lines blocks sit tight in aligned cards */
+@media (min-width:961px){
+  .plan-grid.align-rows .plan .usage.sm{margin-top:16px}
+  .plan-grid.align-rows .plan .price-lines{margin:16px 0 0}
 }
