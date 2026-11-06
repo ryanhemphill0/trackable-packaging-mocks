@@ -572,3 +572,11 @@ section{position:relative}
   .plan-grid.align-rows .plan .usage.sm{margin-top:16px}
   .plan-grid.align-rows .plan .price-lines{margin:16px 0 0}
 }
+/* Modular outcome menu (flex) */
+.oc-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;max-width:1120px;margin:0 auto}
+.oc-grid>.oc-card{flex:0 1 calc((100% - 48px)/3);min-width:280px;box-sizing:border-box}
+.oc-card .outcome-line{margin-top:auto}
+.oc-card .feat{margin-bottom:16px}
+.oc-crm{border:2px solid var(--brand-primary-default)}
+.oc-more{text-align:center;margin:28px 0 0;color:var(--warm-ink-700);font-size:15px}
+@media (max-width:960px){.oc-grid>.oc-card{flex-basis:100%;max-width:520px}}
