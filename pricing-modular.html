@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex,nofollow">
 <title>[Draft] Pricing — Agent lineup · Trackable</title>
 <link rel="icon" type="image/svg+xml" href="https://trackable.io/favicon.svg">
-<link rel="stylesheet" href="styles.css?v=20261106j">
+<link rel="stylesheet" href="styles.css?v=20261106k">
 </head><body class="agent-lineup">
 <nav class="header-nav"><div class="wrap"><div class="bar">
   <div class="left">
@@ -33,7 +33,8 @@
 <section class="agent-pricing"><div class="wrap"><div class="agent-ladder" aria-label="Draft bundle pricing">
 <div><b>1 agent</b><strong>$<span data-m="299">299</span> <small>/ agent</small></strong><p>CRM +$<span data-m="199">199</span> if the agent needs it</p></div>
 <div><b>2 agents</b><strong>$<span data-m="299">299</span> <small>/ agent</small></strong><p>CRM included · $598 / mo · draft</p></div>
-<div><b>3+ agents</b><strong>$<span data-m="249">249</span> <small>/ agent</small></strong><p>CRM included · 3 agents $747 / mo · draft</p></div>
+<div><b>3–4 agents</b><strong>$<span data-m="249">249</span> <small>/ agent</small></strong><p>CRM included · 3 agents $747 / mo · draft</p></div>
+<div class="full-desk"><b>Full Front Desk AI</b><strong>$<span data-m="899">899</span> <small>/ mo</small></strong><p>All 5 agents + CRM + Online Scheduler · draft</p></div>
 </div><p class="popular-pair"><span class="chip blue">Most popular: Call + Recall</span></p></div></section>
 <section class="plans" id="outcomes"><div class="wrap"><div class="oc-grid">
   <div class="plan oc-card">
@@ -123,7 +124,7 @@
 
 <section class="block" id="faq"><div class="wrap">
   <div class="section-head"><span class="label">FAQ</span><h2>Straight answers.</h2></div>
-  <div class="faq"><details><summary>How does bundle pricing work?</summary><p>One agent is $299 per month. Two agents are $299 each ($598) and three or more are $249 each, with the CRM included. These are draft prices. CRM is included with any two or more agents.</p></details><details><summary>What is the texting allowance?</summary><p>Plans with texting include a monthly text allowance. Texts beyond that allowance are billed per message. Allowance and overage amounts will be confirmed in your proposal.</p></details><details><summary>Do I need the CRM?</summary><p>Recall, Treatment, Waitlist, and Review require CRM; Call Agent does not. CRM is included free with 2+ agents. With a single agent it is +$199, required for those four CRM-dependent agents and optional with Call Agent.</p></details><details><summary>Will the agent actually book appointments?</summary><p>Yes, on Dentrix, Eaglesoft, Open Dental, CareStack, and Dentrix Ascend. On other systems it captures the patient and hands your team a ready-to-book lead.</p></details><details><summary>Is there a setup fee?</summary><p>Yes, a one-time Trackable setup fee, separate from LaunchPad.</p></details></div>
+  <div class="faq"><details><summary>How does bundle pricing work?</summary><p>One agent is $299 per month. Two agents are $299 each ($598) and three or four are $249 each, with the CRM included. Full Front Desk AI is $899 for all five agents, the CRM, and the Online Scheduler. These are draft prices. CRM is included with any two or more agents.</p></details><details><summary>What is the texting allowance?</summary><p>Plans with texting include a monthly text allowance. Texts beyond that allowance are billed per message. Allowance and overage amounts will be confirmed in your proposal.</p></details><details><summary>Do I need the CRM?</summary><p>Recall, Treatment, Waitlist, and Review require CRM; Call Agent does not. CRM is included free with 2+ agents. With a single agent it is +$199, required for those four CRM-dependent agents and optional with Call Agent.</p></details><details><summary>Will the agent actually book appointments?</summary><p>Yes, on Dentrix, Eaglesoft, Open Dental, CareStack, and Dentrix Ascend. On other systems it captures the patient and hands your team a ready-to-book lead.</p></details><details><summary>Is there a setup fee?</summary><p>Yes, a one-time Trackable setup fee, separate from LaunchPad.</p></details></div>
 </div></section>
 
 <section class="block tight" id="fine-print"><div class="wrap">
@@ -175,9 +176,9 @@ function updateSummary(){
  const crmCharge=count===1&&(requiresCRM||(optional&&crmOption.checked));
  const scheduler=schedulerOption.checked;
  document.getElementById('summary-count').textContent=count+' agent'+(count===1?'':'s')+' selected';
- document.getElementById('summary-rate').textContent=count===0?'Choose your agents':(count<=2?money(299):money(249))+' / agent / mo';
+ document.getElementById('summary-rate').textContent=count===0?'Choose your agents':(count===5?'Full Front Desk AI':(count<=2?money(299):money(249))+' / agent / mo');
  document.getElementById('summary-crm').textContent=count>=2?'CRM included':count===0?'CRM added with your lineup':requiresCRM?'+'+money(199)+' CRM required':crmOption.checked?'CRM added +'+money(199):'CRM optional +'+money(199);
- document.getElementById('summary-total').textContent=count===0?'Choose at least 1 agent':money((count<=2?299:249)*count+199*Number(crmCharge)+199*Number(scheduler))+' / mo';
+ document.getElementById('summary-total').textContent=count===0?'Choose at least 1 agent':money(count===5?899:(count<=2?299:249)*count+199*Number(crmCharge)+199*Number(scheduler))+' / mo';
  // Undiscounted monthly reference includes CRM at list price, even when bundled free.
  document.getElementById('summary-list').textContent='List price: $'+(count*299+(count?199:0)+(scheduler?199:0)).toLocaleString('en-US')+' / mo';
  document.getElementById('summary-billing').textContent='Per location · '+(annual?'billed annually · 15% off set prices':'billed monthly');

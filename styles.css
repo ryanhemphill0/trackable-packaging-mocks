@@ -611,3 +611,5 @@ section{position:relative}
 .summary-total small{font-size:12px;color:#737373}
 .agent-lineup .draft-badge{position:static;display:flex;justify-content:center;flex-wrap:wrap;border-radius:0;box-shadow:none;padding:12px 16px}
 @media(max-width:960px){.agent-ladder{flex-direction:column;max-width:520px}.agent-ladder>div{border-right:0;border-bottom:1px solid #dbeafe}.agent-lineup #crm .oc-card{flex-basis:100%}.summary-layout{flex-wrap:wrap;gap:12px 20px}.summary-selection,.summary-options{flex:1;min-width:140px}.summary-total{flex:1;min-width:180px}.agent-summary{padding:12px 0}.agent-summary .btn{height:44px;padding:12px 16px}.agent-outcome{min-height:0}}
+
+.agent-ladder>.full-desk{background:var(--brand-primary-default,#1d4ed8)}.agent-ladder>.full-desk b,.agent-ladder>.full-desk strong,.agent-ladder>.full-desk p,.agent-ladder>.full-desk small{color:#fff}
