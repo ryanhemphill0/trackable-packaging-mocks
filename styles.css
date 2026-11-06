@@ -580,3 +580,34 @@ section{position:relative}
 .oc-crm{border:2px solid var(--brand-primary-default)}
 .oc-more{text-align:center;margin:28px 0 0;color:var(--warm-ink-700);font-size:15px}
 @media (max-width:960px){.oc-grid>.oc-card{flex-basis:100%;max-width:520px}}
+
+/* Agent lineup: flexible outcome cards, draft ladder, and sticky bundle builder. */
+.agent-lineup{padding-bottom:var(--summary-height,160px)}
+.agent-pricing{padding:0 0 12px}
+.agent-ladder{display:flex;max-width:1120px;margin:auto;border:1px solid #dbeafe;border-radius:16px;background:#f8fbff;overflow:hidden}
+.agent-ladder>div{flex:1;padding:24px 28px;border-right:1px solid #dbeafe}
+.agent-ladder>div:last-child{border:0}
+.agent-ladder b{display:block;font-size:14px;color:var(--brand-primary-default)}
+.agent-ladder strong{display:block;font-family:var(--font-heading);font-size:32px;margin:8px 0}
+.agent-ladder small{font:400 14px var(--font-sans);color:#737373}
+.agent-ladder p{font-size:13px;color:#525252}
+.popular-pair{text-align:center;margin:24px 0 12px}
+.agent-outcome{font-size:16px;font-weight:600;line-height:1.45;margin-top:8px;color:var(--brand-primary-default);min-height:48px}
+.agent-select{display:flex;align-items:center;gap:10px;background:#f5f5f5;border:1px solid #e5e5e5;padding:12px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}
+.agent-lineup input[type=checkbox]{width:18px;height:18px;accent-color:#2563eb;flex-shrink:0}
+.agent-lineup .plan.selected{border-color:var(--brand-primary-default);box-shadow:0 8px 24px -16px #2563eb80}
+.agent-lineup .plan.selected .agent-select{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
+.agent-lineup #crm .oc-card{flex-basis:calc((100% - 24px)/2)}
+.agent-summary{position:fixed;bottom:0;left:0;right:0;z-index:910;background:#fff;border-top:1px solid #dbeafe;box-shadow:0 -8px 32px #0000000d;padding:20px 0}
+.summary-layout{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.summary-selection{display:flex;flex-direction:column;font-size:13px;gap:2px}
+.summary-selection b{font-size:16px}
+.summary-options{display:flex;flex-direction:column;gap:8px;font-size:13px}
+.summary-options label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.summary-options label[hidden]{display:none}
+.summary-options label span{margin-left:-6px}
+.summary-total{display:flex;flex-direction:column;gap:2px}
+.summary-total strong{font-size:18px}
+.summary-total small{font-size:12px;color:#737373}
+.agent-lineup .draft-badge{position:static;display:flex;justify-content:center;flex-wrap:wrap;border-radius:0;box-shadow:none;padding:12px 16px}
+@media(max-width:960px){.agent-ladder{flex-direction:column;max-width:520px}.agent-ladder>div{border-right:0;border-bottom:1px solid #dbeafe}.agent-lineup #crm .oc-card{flex-basis:100%}.summary-layout{flex-wrap:wrap;gap:12px 20px}.summary-selection,.summary-options{flex:1;min-width:140px}.summary-total{flex:1;min-width:180px}.agent-summary{padding:12px 0}.agent-summary .btn{height:44px;padding:12px 16px}.agent-outcome{min-height:0}}
