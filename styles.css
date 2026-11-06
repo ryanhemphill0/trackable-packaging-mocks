@@ -376,7 +376,7 @@ section{position:relative}
 /* ==========================================================================
    Index (mock chooser)
    ========================================================================== */
-.chooser{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1120px;margin:0 auto}
+.chooser{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:920px;margin:0 auto}
 @media (max-width:960px){.chooser{grid-template-columns:1fr;max-width:560px}}
 .choice{background:#fff;border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:all .2s;box-shadow:0 1px 2px #0000000d}
 .choice:hover{border-color:#d4d4d4;box-shadow:0 20px 40px -20px #00000033;transform:translateY(-2px)}
