@@ -811,3 +811,9 @@ section{position:relative}
 .agent-lineup .agents-grid details,.agent-lineup .addons-grid details{margin-top:6px;padding-top:6px}
 .agent-lineup .platform-grid .platform-card{padding:18px 20px;gap:14px}
 .agent-lineup .sku-group{padding:8px 0}
+/* section breathing room */
+.agent-lineup .sku-group{padding:28px 0}
+.agent-lineup .sku-group + .sku-group{border-top:1px solid #f0f0f0}
+.agent-lineup .sku-group-heading{margin-bottom:16px}
+.agent-lineup .agents-grid{gap:16px}
+@media(max-width:650px){.agent-lineup .sku-group{padding:20px 0}.agent-lineup .agents-grid{gap:10px}}
