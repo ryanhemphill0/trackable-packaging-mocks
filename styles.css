@@ -771,3 +771,4 @@ section{position:relative}
 .agent-ladder>div p{font-size:11px!important;line-height:1.35}
 .agent-ladder .full-desk-select{font-size:11px;padding:3px 6px}
 }
+.full-desk-save{display:inline-block;margin-top:6px;padding:3px 8px;border-radius:999px;background:#e7f6ec;color:#17803d;font-weight:600;font-size:12px}
