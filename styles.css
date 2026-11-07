@@ -762,3 +762,12 @@ section{position:relative}
 .agent-summary .selection-details summary{font-size:12px!important}
 .agent-summary .selection-details ul{font-size:12px;max-height:30vh;overflow:auto}
 }
+@media(max-width:700px){
+.agent-ladder{display:grid!important;grid-template-columns:1fr 1fr!important;gap:0!important}
+.agent-ladder>div{padding:10px 12px!important;border-right:1px solid #e5edf8;border-bottom:1px solid #e5edf8}
+.agent-ladder>div:nth-child(2n){border-right:0}
+.agent-ladder>div b{font-size:11px}
+.agent-ladder>div strong{font-size:18px!important}
+.agent-ladder>div p{font-size:11px!important;line-height:1.35}
+.agent-ladder .full-desk-select{font-size:11px;padding:3px 6px}
+}
