@@ -750,3 +750,15 @@ section{position:relative}
 .agent-lineup .agents-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .agent-lineup .agents-grid .sku-card{flex-basis:auto!important;width:auto!important;max-width:none!important}
 @media(max-width:800px){.agent-lineup .agents-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.agent-lineup .agents-grid .sku-card{padding:12px}.agent-lineup .agents-grid .sku-outcome{min-height:0}}
+@media(max-width:700px){
+.agent-summary{padding:8px 0 calc(8px + env(safe-area-inset-bottom))!important}
+.agent-summary .summary-layout{display:grid!important;grid-template-columns:1fr auto;grid-template-areas:"sel total" "btn btn";gap:6px 12px!important;align-items:center;padding:0 14px!important}
+.agent-summary .summary-selection{grid-area:sel;display:flex;flex-direction:column;gap:0;min-width:0}
+.agent-summary .summary-total{grid-area:total;text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+.agent-summary .btn{grid-area:btn;padding:9px 14px!important;font-size:14px!important;width:100%}
+.agent-summary #summary-count{font-size:14px!important}
+.agent-summary #summary-total{font-size:18px!important;line-height:1.2}
+.agent-summary #summary-rate,.agent-summary #summary-crm,.agent-summary #summary-tbd,.agent-summary #summary-setup,.agent-summary #summary-billing{display:none!important}
+.agent-summary .selection-details summary{font-size:12px!important}
+.agent-summary .selection-details ul{font-size:12px;max-height:30vh;overflow:auto}
+}
