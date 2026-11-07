@@ -781,3 +781,26 @@ section{position:relative}
 .chooser .choice:hover .thumb.shot img{transform:scale(1.03)}
 .chooser .thumb.art{padding:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#f5f8ff,#eef3fe);aspect-ratio:16/10}
 .chooser .thumb.art svg{width:78%;height:auto;display:block}
+/* landing thumbs with per-model flair */
+.tcard{position:relative}
+.t-bundle{align-items:flex-end}
+.t-bundle .tcard{width:60px}
+.t-bundle .st1{height:76px}.t-bundle .st2{height:112px}.t-bundle .st3{height:140px}
+.t-bundle .tl{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font:700 11px/1 Inter,system-ui,sans-serif;color:#9ca3af}
+.t-bundle .st2 .tl{color:var(--brand-primary-default)}
+.t-bundle .rec{position:absolute;top:-6px;right:-6px;width:12px;height:12px;border-radius:50%;background:var(--brand-primary-default);box-shadow:0 0 0 3px #fff}
+.t-agent .dir{position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 13px/1 system-ui,sans-serif;background:#fff;border:1px solid #e5e5e5;color:var(--ink)}
+.t-agent .dir.both{background:var(--brand-primary-default);border-color:var(--brand-primary-default);color:#fff}
+.t-agent .tcard{margin-top:14px}
+.t-agent .tcard.wide{width:84px}
+.t-mod{flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.t-mod .tgrid{display:grid;grid-template-columns:repeat(3,40px);gap:8px}
+.t-mod .tile{height:34px;background:#fff;border:1px solid #e5e5e5;border-radius:7px;position:relative}
+.t-mod .tile::before{content:"";position:absolute;top:7px;left:7px;width:9px;height:9px;border-radius:2px;border:1.5px solid #d4d4d4}
+.t-mod .tile.on{border-color:var(--brand-primary-default)}
+.t-mod .tile.on::before{background:var(--brand-primary-default);border-color:var(--brand-primary-default)}
+.t-mod .tbar{width:168px;height:26px;background:#fff;border:1px solid #e5e5e5;border-bottom:0;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:space-between;padding:0 8px}
+.t-mod .tbar i{display:block;width:60px;height:5px;border-radius:3px;background:#e5e5e5}
+.t-mod .tbar b{display:block;width:36px;height:12px;border-radius:4px;background:var(--brand-primary-default)}
+.choice .thumb.t-mod{align-items:center}
+.t-bundle .st3{height:124px}.t-bundle .st2{height:100px}.t-bundle .st1{height:72px}
