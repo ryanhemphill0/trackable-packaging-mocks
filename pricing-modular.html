@@ -5,7 +5,7 @@
 <meta content="noindex,nofollow" name="robots"/>
 <title>[Draft] Pricing — Modular pricing · Trackable</title>
 <link href="https://trackable.io/favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="styles.css?v=20261106w" rel="stylesheet"/>
+<link href="styles.css?v=20261106x" rel="stylesheet"/>
 </head><body class="agent-lineup">
 <nav class="header-nav"><div class="wrap"><div class="bar">
 <div class="left">
@@ -107,7 +107,7 @@ function updateSummary() {
  document.getElementById('scheduler-option-note').textContent = full ? 'Included with Full Front Desk AI' : 'Optional add-on';
  document.getElementById('platform-card-price').dataset.m = platformPrice;
  document.getElementById('platform-price-amount').hidden = count >= 2; document.getElementById('platform-included').hidden = count < 2;
- document.getElementById('platform-price-unit').textContent = count >= 2 ? ' with 2+ agents' : count === 0 ? ' / mo standalone' : ' / mo with 1 agent';
+ document.getElementById('platform-price-unit').classList.toggle('unit-below', count >= 2); document.getElementById('platform-price-unit').textContent = count >= 2 ? 'with 2+ agents' : count === 0 ? ' / mo standalone' : ' / mo with 1 agent';
  { const call = agentChecks[0]; const order = [...agents].sort((a, b) => (b === call) - (a === call)); agentChecks.forEach(x => { const el = x.closest('.plan, article, .sku-card').querySelector('.agent-card-price'); if (!el) return; el.dataset.m = x === call ? 299 : x.checked ? tier(order.indexOf(x)) : tier(count); }); }
  renderPrices();
  { const addons = [schedulerOption, workflowOption].filter(x => x.checked).length; const parts = []; if (count) parts.push(count + ' agent' + (count === 1 ? '' : 's')); if (platformOption.checked) parts.push('CRM'); if (addons) parts.push(addons + ' add-on' + (addons === 1 ? '' : 's')); document.getElementById('summary-count').textContent = parts.length ? parts.join(' · ') : 'Nothing selected yet'; }
