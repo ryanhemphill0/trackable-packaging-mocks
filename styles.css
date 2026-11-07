@@ -824,3 +824,8 @@ section{position:relative}
 .agent-lineup .hero .lead{font-size:18px;line-height:1.7;max-width:640px}
 @media(max-width:767px){.agent-lineup .hero{padding:64px 0 40px}.agent-lineup .hero h1{font-size:36px;line-height:1.2;margin-bottom:16px}.agent-lineup .hero .lead{font-size:17px;line-height:1.65}.agent-lineup .hero .meta{margin-bottom:20px}}
 .agent-lineup .hero .toggle{margin-top:32px}
+/* relaxed card padding */
+.agent-lineup .agents-grid .sku-card,.agent-lineup .addons-grid .sku-card{padding:20px 20px;gap:8px}
+.agent-lineup .agents-grid .sku-price,.agent-lineup .addons-grid .sku-price{font-size:22px;margin-top:6px}
+.agent-lineup .agents-grid details,.agent-lineup .addons-grid details{margin-top:10px;padding-top:10px}
+.agent-lineup .platform-grid .platform-card{padding:24px 24px;gap:16px}
