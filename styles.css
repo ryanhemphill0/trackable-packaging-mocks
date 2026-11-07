@@ -746,3 +746,7 @@ section{position:relative}
 .setup-price-label{font-size:12px;font-weight:600;color:#171717!important}
 .setup-info-price strong{font-size:30px}
 @media(max-width:800px){.sku-group .setup-info{flex-direction:column}.setup-steps{grid-template-columns:1fr}.setup-info-price{border-left:0;border-top:1px solid #eef0f3}}
+
+.agent-lineup .agents-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.agent-lineup .agents-grid .sku-card{flex-basis:auto!important;width:auto!important;max-width:none!important}
+@media(max-width:800px){.agent-lineup .agents-grid{grid-template-columns:1fr}}
