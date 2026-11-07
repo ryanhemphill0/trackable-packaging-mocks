@@ -749,4 +749,4 @@ section{position:relative}
 
 .agent-lineup .agents-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .agent-lineup .agents-grid .sku-card{flex-basis:auto!important;width:auto!important;max-width:none!important}
-@media(max-width:800px){.agent-lineup .agents-grid{grid-template-columns:1fr}}
+@media(max-width:800px){.agent-lineup .agents-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.agent-lineup .agents-grid .sku-card{padding:12px}.agent-lineup .agents-grid .sku-outcome{min-height:0}}
