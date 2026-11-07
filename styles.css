@@ -774,3 +774,4 @@ section{position:relative}
 .full-desk-save{display:inline-block;margin-top:6px;padding:3px 8px;border-radius:999px;background:#e7f6ec;color:#17803d;font-weight:600;font-size:12px}
 .bar-save{color:#17803d;font-weight:700}
 @media (max-width:640px){#summary-tbd:has(.bar-save){display:block!important}}
+.platform-disclaimer{grid-column:1/-1;margin:12px 0 0;font-size:12px;color:#6b7280}
