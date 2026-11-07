@@ -817,3 +817,10 @@ section{position:relative}
 .agent-lineup .sku-group-heading{margin-bottom:16px}
 .agent-lineup .agents-grid{gap:16px}
 @media(max-width:650px){.agent-lineup .sku-group{padding:20px 0}.agent-lineup .agents-grid{gap:10px}}
+/* modular hero matches other pages */
+.agent-lineup .hero{padding:96px 0 56px}
+.agent-lineup .hero .meta{margin-bottom:24px}
+.agent-lineup .hero h1{font-size:60px;line-height:1.15;margin:0 auto 20px}
+.agent-lineup .hero .lead{font-size:18px;line-height:1.7;max-width:640px}
+@media(max-width:767px){.agent-lineup .hero{padding:64px 0 40px}.agent-lineup .hero h1{font-size:36px;line-height:1.2;margin-bottom:16px}.agent-lineup .hero .lead{font-size:17px;line-height:1.65}.agent-lineup .hero .meta{margin-bottom:20px}}
+.agent-lineup .hero .toggle{margin-top:32px}
