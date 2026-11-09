@@ -854,3 +854,30 @@ section{position:relative}
 .agent-lineup .agents-grid details,.agent-lineup .addons-grid details{margin-top:16px;padding-top:12px;border-top:1px solid #f0f0f0}
 .agent-lineup .agents-grid details summary,.agent-lineup .addons-grid details summary{font-size:13px}
 @media(max-width:650px){.agent-lineup .agents-grid .sku-card,.agent-lineup .addons-grid .sku-card{padding:16px 14px}.agent-lineup .agents-grid .sku-heading,.agent-lineup .addons-grid .sku-heading{font-size:17px;gap:8px}.agent-lineup .agents-grid .sku-outcome,.agent-lineup .addons-grid .sku-outcome{font-size:13px}.agent-lineup .agents-grid .sku-price,.agent-lineup .addons-grid .sku-price{font-size:32px;margin-top:12px}.agent-lineup .agents-grid .sku-price sup,.agent-lineup .addons-grid .sku-price sup{font-size:16px}.agent-lineup .agents-grid .sku-price small,.agent-lineup .addons-grid .sku-price small{font-size:11px;margin-left:3px}}
+/* section headings + CRM card polish */
+.agent-lineup .sku-group-heading{align-items:baseline;gap:14px;margin-bottom:20px}
+.agent-lineup .sku-group-heading h2{font-size:32px;font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.agent-lineup .sku-group-heading p{font-size:15px;color:var(--text-subtle)}
+.agent-lineup .platform-grid .platform-card{padding:28px 28px 24px;gap:24px;border-radius:16px}
+.agent-lineup .platform-card .sku-heading{font-family:var(--font-heading);font-size:28px;font-weight:700;letter-spacing:-.02em;color:var(--text-strong);gap:12px}
+.agent-lineup .platform-card .sku-heading input{width:18px;height:18px}
+.agent-lineup .platform-card .sku-outcome{font-size:16px;font-weight:500;color:var(--brand-primary-default);margin-top:8px}
+.agent-lineup .platform-pricing .sku-price{font-family:var(--font-heading);font-size:40px;font-weight:700;letter-spacing:-.02em;line-height:1.05;color:var(--text-strong)}
+.agent-lineup .platform-pricing .sku-price small{font-family:var(--font-sans);font-size:14px;font-weight:400;letter-spacing:0;color:var(--text-subtle)}
+.agent-lineup .platform-pricing .sku-note{font-size:13px;color:var(--text-soft)}
+.agent-lineup .platform-features{gap:14px}
+.agent-lineup .platform-feature{padding:18px 16px;gap:12px}
+.agent-lineup .platform-feature-icon{flex:0 0 40px;width:40px;height:40px}
+.agent-lineup .platform-feature-icon svg{width:22px;height:22px}
+.agent-lineup .platform-feature-copy h3{font-size:16px;font-weight:650;margin-bottom:4px}
+.agent-lineup .platform-feature-copy p{font-size:14px}
+.agent-lineup .platform-disclaimer{font-size:13px}
+.agent-lineup .setup-info h3{font-size:22px}
+.agent-lineup .setup-info p{font-size:15px}
+.agent-lineup .setup-step b{font-size:15px}
+.agent-lineup .setup-step small{font-size:13px}
+.agent-lineup .setup-info-price strong{font-size:40px;font-family:var(--font-heading);letter-spacing:-.02em}
+.agent-lineup .setup-info-price span{font-size:13px}
+@media(min-width:1100px){.agent-lineup .platform-feature-copy p{white-space:normal}}
+@media(max-width:650px){.agent-lineup .sku-group-heading h2{font-size:26px}.agent-lineup .sku-group-heading p{font-size:14px}.agent-lineup .platform-grid .platform-card{padding:20px 18px}.agent-lineup .platform-card .sku-heading{font-size:22px}.agent-lineup .platform-card .sku-outcome{font-size:15px}.agent-lineup .platform-pricing .sku-price{font-size:34px}.agent-lineup .platform-feature-copy h3{font-size:15px}}
+@media(min-width:1100px){.agent-lineup .platform-features{grid-template-columns:repeat(3,minmax(0,1fr))}}
