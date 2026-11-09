@@ -842,3 +842,15 @@ section{position:relative}
 .agent-lineup .platform-feature-copy h3{font-size:15px}
 .agent-lineup .platform-feature-copy p{font-size:13px}
 @media(max-width:650px){.agent-lineup .agents-grid .sku-heading,.agent-lineup .addons-grid .sku-heading{font-size:16px}.agent-lineup .agents-grid .sku-price,.agent-lineup .addons-grid .sku-price{font-size:24px}}
+/* polished card hierarchy (matches earlier agent cards) */
+.agent-lineup .agents-grid .sku-card,.agent-lineup .addons-grid .sku-card{padding:24px 24px 20px;gap:0;border-radius:16px}
+.agent-lineup .agents-grid .sku-heading,.agent-lineup .addons-grid .sku-heading{font-family:var(--font-heading);font-size:22px;font-weight:700;line-height:1.25;color:var(--text-strong);letter-spacing:-.01em;align-items:center;gap:10px}
+.agent-lineup .agents-grid .sku-heading input,.agent-lineup .addons-grid .sku-heading input{margin-top:0;width:16px;height:16px;flex:none}
+.agent-lineup .agents-grid .sku-outcome,.agent-lineup .addons-grid .sku-outcome{font-size:14px;font-weight:500;line-height:1.4;color:var(--brand-primary-default);margin-top:6px}
+.agent-lineup .agents-grid .sku-price,.agent-lineup .addons-grid .sku-price{display:flex;align-items:baseline;gap:2px;margin-top:18px;font-family:var(--font-heading);font-size:44px;font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--text-strong)}
+.agent-lineup .agents-grid .sku-price sup,.agent-lineup .addons-grid .sku-price sup{font-size:22px;align-self:flex-start;position:relative;top:2px;margin-right:1px}
+.agent-lineup .agents-grid .sku-price small,.agent-lineup .addons-grid .sku-price small{font-family:var(--font-sans);font-size:13px;font-weight:400;letter-spacing:0;color:var(--text-subtle);margin-left:6px}
+.agent-lineup .agents-grid .sku-note,.agent-lineup .addons-grid .sku-note{font-size:12px;color:var(--text-soft);margin-top:8px}
+.agent-lineup .agents-grid details,.agent-lineup .addons-grid details{margin-top:16px;padding-top:12px;border-top:1px solid #f0f0f0}
+.agent-lineup .agents-grid details summary,.agent-lineup .addons-grid details summary{font-size:13px}
+@media(max-width:650px){.agent-lineup .agents-grid .sku-card,.agent-lineup .addons-grid .sku-card{padding:16px 14px}.agent-lineup .agents-grid .sku-heading,.agent-lineup .addons-grid .sku-heading{font-size:17px;gap:8px}.agent-lineup .agents-grid .sku-outcome,.agent-lineup .addons-grid .sku-outcome{font-size:13px}.agent-lineup .agents-grid .sku-price,.agent-lineup .addons-grid .sku-price{font-size:32px;margin-top:12px}.agent-lineup .agents-grid .sku-price sup,.agent-lineup .addons-grid .sku-price sup{font-size:16px}.agent-lineup .agents-grid .sku-price small,.agent-lineup .addons-grid .sku-price small{font-size:11px;margin-left:3px}}
